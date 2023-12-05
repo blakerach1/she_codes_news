@@ -4,7 +4,6 @@ from django.db import models
 class CustomUser(AbstractUser):
     pass
 
-    email = models.EmailField(unique=True)
     description = models.TextField("Description", max_length=600, default='', blank=True)
 
     def __str__(self):
