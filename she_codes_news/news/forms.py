@@ -13,6 +13,9 @@ class StoryForm(ModelForm):
                     'class':'form-control',
                     'placeholder':'Select a date',
                     'type':'date'
-                }
-            ),
+                }),
         }
+
+
+
+    
