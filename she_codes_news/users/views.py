@@ -23,6 +23,4 @@ class UserProfilePage(DetailView):
     context_object_name = 'user_profile'
     slug_field = 'username'
     slug_url_kwarg = 'username'
- 
-
 
