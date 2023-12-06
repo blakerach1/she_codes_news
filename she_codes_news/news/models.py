@@ -11,3 +11,6 @@ class NewsStory(models.Model):
     pub_date = models.DateTimeField()
     content = models.TextField()
     image = models.URLField(null=True, blank=True)
+
+
+# add comments and categories within news app rather than creating separate app

@@ -17,12 +17,12 @@ class CreateAccountView(CreateView):
     template_name = 'users/createAccount.html'
 
 
-class UserProfilePage(LoginRequiredMixin, CreateView):
-    model = CustomUser
+class UserProfilePage(DetailView):
+    model = get_user_model()
     template_name = 'users/profile.html'
-    form_class = CustomUserCreationForm
-    # login_url = ''
-    # redirect_field_name = ''
-    
+    context_object_name = 'user_profile'
+    slug_field = 'username'
+    slug_url_kwarg = 'username'
+ 
 
 
