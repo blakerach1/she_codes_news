@@ -34,3 +34,13 @@ class AddStoryView(generic.CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
     
+
+class AuthorStoryView(generic.ListView):
+    model = NewsStory
+    template_name = 'news/index.html'
+    context_object_name = 'latest_stories'
+    slug_field = 'username'
+    slug_url_kwarg = 'username'
+
+    def get_queryset(self):
+        return NewsStory.objects.filter(author__username=self.kwargs['username'])
