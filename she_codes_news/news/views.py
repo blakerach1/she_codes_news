@@ -1,4 +1,5 @@
 from django.views import generic
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from .models import NewsStory
 from .forms import StoryForm
@@ -35,12 +36,14 @@ class AddStoryView(generic.CreateView):
         return super().form_valid(form)
     
 
-class AuthorStoryView(generic.ListView):
+class AuthorStoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/index.html'
     context_object_name = 'latest_stories'
-    slug_field = 'username'
-    slug_url_kwarg = 'username'
+    slug_field = 'author'
+    slug_url_kwarg = 'author'
 
-    def get_queryset(self):
-        return NewsStory.objects.filter(author__username=self.kwargs['username'])
+    def get_object(self):
+        # filtered_stories = NewsStory.objects.filter(author__username=self.kwargs['author'])
+        return get_object_or_404(NewsStory, author__username=self.kwargs['author'])
+  

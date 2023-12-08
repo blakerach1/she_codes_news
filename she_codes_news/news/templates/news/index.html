@@ -9,12 +9,12 @@
     
     <br>
     <a href="{% url 'news:newStory' %}">Write New Story</a>
-{% comment %} 
+
     {% if latest_stories %}
-        <h2>Stories by {{ latest_stories.0.author.username }}</h2>
-    {% else %} {% endcomment %}
+        <h2>Stories by {{ author.username }}</h2>
+    {% else %}
         <h2>Latest News</h2>
-    {% comment %} {% endif %} {% endcomment %}
+    {% endif %}
 
     <div id="latest-stories">
         {% if latest_stories %}
