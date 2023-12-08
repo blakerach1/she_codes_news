@@ -40,10 +40,8 @@ class AuthorStoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/index.html'
     context_object_name = 'latest_stories'
-    slug_field = 'author'
-    slug_url_kwarg = 'author'
 
-    def get_object(self):
-        # filtered_stories = NewsStory.objects.filter(author__username=self.kwargs['author'])
-        return get_object_or_404(NewsStory, author__username=self.kwargs['author'])
+    def get_queryset(self):
+        return super().get_queryset()
+
   

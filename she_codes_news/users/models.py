@@ -5,7 +5,7 @@ class CustomUser(AbstractUser):
     pass
 
     description = models.TextField("Description", max_length=600, default='', blank=True)
-
+    
     def __str__(self):
         return self.username
     
