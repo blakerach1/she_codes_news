@@ -5,7 +5,11 @@
         <a href="{% url 'logout' %}">Logout</a>
         <a href="{% url 'users:userProfile' username=request.user.username %}">View Profile</a>
     {% else %}
-        <a href="{% url 'login' %}">Login</a>
+        {% url 'login' as url %}
+        {% if request.path != url %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+        <a href="{% url 'users:createAccount' %}">Create Account</a>
     {% endif %}
 
 </nav>
