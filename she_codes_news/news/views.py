@@ -38,15 +38,6 @@ class AddStoryView(generic.CreateView):
     
 
 class AuthorStoryView(generic.DetailView):
-<<<<<<< Updated upstream
-    model = NewsStory
-    template_name = 'news/index.html'
-    context_object_name = 'latest_stories'
-
-    def get_queryset(self):
-        return super().get_queryset()
-
-=======
     model = CustomUser
     template_name = 'news/index.html'
     context_object_name = 'latest_stories'
@@ -64,5 +55,4 @@ class AuthorStoryView(generic.DetailView):
         # Use the author_id to filter NewsStory objected related to the author
         queryset = NewsStory.objects.filter(author_id=author_id)              
         return queryset
->>>>>>> Stashed changes
   
