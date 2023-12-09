@@ -2,6 +2,7 @@ from django.views import generic
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from .models import NewsStory
+from users.models import CustomUser
 from .forms import StoryForm
 
 
@@ -37,6 +38,7 @@ class AddStoryView(generic.CreateView):
     
 
 class AuthorStoryView(generic.DetailView):
+<<<<<<< Updated upstream
     model = NewsStory
     template_name = 'news/index.html'
     context_object_name = 'latest_stories'
@@ -44,4 +46,23 @@ class AuthorStoryView(generic.DetailView):
     def get_queryset(self):
         return super().get_queryset()
 
+=======
+    model = CustomUser
+    template_name = 'news/index.html'
+    context_object_name = 'latest_stories'
+    slug_field = 'username'
+    slug_url_kwarg = 'username'
+
+    def get_queryset(self):
+        # Get the username from the URL parameter
+        username = self.kwargs.get('username', None)
+
+        # use the username to filter CustomUser and get the primary key
+        author = CustomUser.objects.get(username=username)
+        author_id = author.pk
+
+        # Use the author_id to filter NewsStory objected related to the author
+        queryset = NewsStory.objects.filter(author_id=author_id)              
+        return queryset
+>>>>>>> Stashed changes
   
