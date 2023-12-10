@@ -8,6 +8,10 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser
         fields = ['username', 'email']
 
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        lowercase_username = username.lower()
+        return lowercase_username
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
