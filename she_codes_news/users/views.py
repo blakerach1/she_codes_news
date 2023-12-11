@@ -4,11 +4,22 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from django.views.generic import DetailView
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import CustomUser
 from .forms import CustomUserCreationForm, UserUpdateForm
+
+class PasswordsChangeView(PasswordChangeView):
+    form_class = PasswordChangeForm
+    success_url = reverse_lazy('users:password_success')
+    template_name= 'registration/change-password.html'
+
+
+def password_success(request):
+     return render(request, 'registration/password_success.html', {})
 
 
 class CreateAccountView(CreateView):
