@@ -1,9 +1,10 @@
 from django.shortcuts import get_object_or_404
 from django.views import generic
+from django.views.generic.edit import UpdateView
 from django.urls import reverse_lazy
 from .models import NewsStory
 from users.models import CustomUser
-from .forms import StoryForm
+from .forms import StoryForm, EditStoryForm
 
 
 class IndexView(generic.ListView):
@@ -36,8 +37,14 @@ class AddStoryView(generic.CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
     
+
+class UpdateStoryView(UpdateView):
+    model = NewsStory
+    form_class = EditStoryForm
+    template_name = 'news/update_story.html'
+    
+    
 class AuthorStoryView(generic.ListView):
-    # model = NewsStory
     template_name = 'news/index.html'
     context_object_name = 'latest_stories'
 

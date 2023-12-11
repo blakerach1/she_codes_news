@@ -16,6 +16,13 @@ class StoryForm(ModelForm):
                 }),
         }
 
+class EditStoryForm(ModelForm):
+    class Meta:
+        model = NewsStory
+        fields = ['title', 'image', 'content']
+   
+
+
 
 
     
