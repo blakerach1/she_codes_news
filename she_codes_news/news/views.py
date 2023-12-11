@@ -42,8 +42,14 @@ class UpdateStoryView(UpdateView):
     model = NewsStory
     form_class = EditStoryForm
     template_name = 'news/update_story.html'
-    
-    
+
+
+class DeleteStoryView(generic.DeleteView):
+    model = NewsStory
+    template_name = 'news/delete_story.html'
+    success_url = reverse_lazy('news:index')
+
+
 class AuthorStoryView(generic.ListView):
     template_name = 'news/index.html'
     context_object_name = 'latest_stories'

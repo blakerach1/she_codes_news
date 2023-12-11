@@ -15,6 +15,5 @@ class NewsStory(models.Model):
 
     def get_absolute_url(self):
         return reverse('news:story', kwargs={"pk": self.pk})
-    
-
+ 
 # add comments and categories within news app rather than creating separate app

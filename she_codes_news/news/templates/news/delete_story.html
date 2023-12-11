@@ -5,13 +5,15 @@
 {% if request.user.is_authenticated %}
     {% if user.id == story.author.id %}   
 
-    <h1>Update Story...</h1>
+    <h1>Delete Story...</h1>
+    <br></br>
+    <h3>Delete: {{ story.title }}</h3>
 
     <div>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save Changes</button>
+        <strong>Are you sure?!</strong>
+        <button type="submit">Delete Story</button>
     </form>
     </div>
     {% else %}
