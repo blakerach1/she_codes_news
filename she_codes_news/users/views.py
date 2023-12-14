@@ -1,6 +1,7 @@
 from typing import Any
 from django.db import models
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from django.views.generic import DetailView
@@ -8,6 +9,7 @@ from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from news.models import NewsStory
 
 from .models import CustomUser
 from .forms import CustomUserCreationForm, UserUpdateForm
@@ -34,4 +36,7 @@ class UserProfilePage(DetailView):
     context_object_name = 'user_profile'
     slug_field = 'username'
     slug_url_kwarg = 'username'
-
+   
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

@@ -4,8 +4,13 @@
 
     <h1>User Profile</h2>
 
-    <p>Username: {{ user.username }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Description: {{ user.description }}
+    <p>Username: {{ user_profile.username }}</p>
+    <p>Email: {{ user_profile.email }}</p>
+    <p>Description: {{ user_profile.description }}
 
+    {% if request.user.is_authenticated %}
+        <p><a href="{% url 'users:changePassword' %}">Update Password</a></p> 
+    {% else %}
+    {% endif %}
+    
 {% endblock %}

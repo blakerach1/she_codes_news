@@ -70,6 +70,7 @@
 - Users stay updated with the most recent stories at a glance. 
 - [x] Order stories by date
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
 **News by Author**
 - Users can explore stories curated by their favourite authors. 
 - [x] View stories by author
@@ -89,22 +90,25 @@
 ## Additional Features:
 
 ### Authentication Functionality:
+
 **Secure Editing and Deletion**
 - Users have the power to edit and delete only the stories they have authored, ensuring content integrity. 
 - [x] Add the ability to update and delete stories (consider permissions - whoshould be allowed to update or and/or delete stories).
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
+- Once Users are registered, they unlock additional access to create their own news content.
 - [x] Gracefully handle the error where someone tries to create a new story when they are not logged in.
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
+**Password Management**
+- [x] Password Management: Easily update passwords for enhanced account security.
+
+**Authors in-focus**
+- Users are able to share a professional bio for readers to learn more about their favourite authors.
+- [x] Author profiles: View details about the author when selecting the author's username. 
+
+
 ## Future Developments:
-
-- [ ] Author profiles: View details about the author when selecting the author's username. 
-
-- [ ] Password Management: Easily update passwords for enhanced account security.
-
+- [ ] Ability for users to edit their own profile and add a description.
 - [ ] Add categories to the stories and allow the user to search for stories bycategory.
-
 - [ ] Add the ability to “favourite” stories and see a page with your favouritestories.
-
-- [ ] Our form for creating stories requires you to add the publication date, update this to automatically save the publication date as the day the story was first published (maybe you could then add a field to show when the story was updated).
+- [ ] Automatically populate publication date, as the day the story was first published (maybe you could then add a field to show when the story was updated).

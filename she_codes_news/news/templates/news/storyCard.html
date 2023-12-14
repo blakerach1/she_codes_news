@@ -10,9 +10,11 @@
             <h4>{{ story.pub_date }}</h4>
         </div>
     </a>
-
+    <div class="user-details">
         <a href="{% url 'news:authorStories' story.author %}">
         <h4>{{ story.author }}</h4>
         </a>
+        <a href="{% url 'users:userProfile' username=story.author %}">View {{ story.author }}'s Profile</a>
+    </div>
 
 </div>
