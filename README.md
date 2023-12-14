@@ -1,62 +1,110 @@
 # {{ Rachel Blake }} - She Codes News Project
 
-## About This Project{{ Give a brief description of your project here. What is it for, how do you useit? }}
+## About This Project
+{{ Welcome to my News Website, a project crafted as part the Django module in the SheCodes Plus program. This dynamic web application empowers users to engage with news content in a personalized and interactive manner. }}
 
 ## How To Run This Code
-
 {{
-Give a quick step-by-step guide on how to download and run your codebase. It's ok to assume the reader is another developer here, so don't feel like youhave to explain what a virtual environment is, etc.
+### Clone the repository:
 
-Give directions like "clone the repo to your local machine", "create a virtualenvironment", "migrate the database", etc.
+- Open your Windows Terminal.
+- Navigate to the directory where you want to store the project.
+- Run the following command to clone the repository:
+`git clone https://github.com/blakerach1/she_codes_news.git`
+- Change into the project directory:
+`cd your-repository`
 
-When you need to specify terminal commands, you can surround them withbackticks, like so: `python manage.py runserver`. This formats them as code in the markdown document. (The backtick key is to the left of the number 1 at the top of your keyboard.)
+### Create and Activate a Virtual Environment:
+- Run the following commands to create a virtual environment named "env" (you can choose a different name) and activate it:
+`python -m venv env`
+`.\env\Scripts\activate``
+
+### Install Dependencies:
+- While the virtual environment is active, install the required dependencies:
+`pip install -r requirements.txt`
+
+### Migrate Databases:
+- Run the following commands to apply migrations and create the database:
+`python manage.py migrate`
+
+### Create a Superuser:
+- If you want to access the Django admin panel, create a superuser:
+`python manage.py createsuperuser`
+- Follow the prompts to set up the superuser account.
+
+### Run the Development Server:
+- Finally, start the Django development server:
+`python manage.py runserver`
+- The server will start, and you can access the project by visiting:
+ `http://127.0.0.1:8000/' in your web browser.
 }}
 
 ## Database Schema
-![ {{ My ERD }} ]( {{ ./relative_path_to_your_entity_relationship_diagram }} )
+![ {{ ERD }} ]( {{ ./relative_path_to_your_entity_relationship_diagram }} )
 
 ## Project Features
 
-- [x] Order stories by date
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+### User-Friendly News Creation:
 
-- [ ] Styled "new story" form
+**Account Creation**
+- Users can easily create an account to unlock personalized features.
+- [x] "Create Account" page
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
-- [x] Story images
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
+- Users can seemlessly login and out of their account. 
 - [x] Log-in/log-out
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
+- Users can view details of their account, include a profile description field. 
 - [x] "Account view" page
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
-- [x] "Create Account" page
+**Story Authoring**
+- Account holders can craft compelling news stories with the ability to include captivating images. 
+- [x] "Create Story" functionality only available when user is logged in
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+- [x] Story images
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
+### Seamless Content Exploration:
+
+**Latest News**
+- Users stay updated with the most recent stories at a glance. 
+- [x] Order stories by date
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+**News by Author**
+- Users can explore stories curated by their favourite authors. 
 - [x] View stories by author
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
+
+### Style:
+
+- [x] Styled "new story" form
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
 - [x] "Log-in" button only visible when no user is logged in/"Log-out" button only visible when a user *is* logged in
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
-- [x] "Create Story" functionality only available when user is logged in
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
 
 ## Additional Features:
 
-- [ ] Add categories to the stories and allow the user to search for stories bycategory.
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
+### Authentication Functionality:
+**Secure Editing and Deletion**
+- Users have the power to edit and delete only the stories they have authored, ensuring content integrity. 
 - [x] Add the ability to update and delete stories (consider permissions - whoshould be allowed to update or and/or delete stories).
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
-- [ ] Add the ability to “favourite” stories and see a page with your favouritestories.
+- [x] Gracefully handle the error where someone tries to create a new story when they are not logged in.
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
+## Future Developments:
+
+- [ ] Author profiles: View details about the author when selecting the author's username. 
+
+- [ ] Password Management: Easily update passwords for enhanced account security.
+
+- [ ] Add categories to the stories and allow the user to search for stories bycategory.
+
+- [ ] Add the ability to “favourite” stories and see a page with your favouritestories.
 
 - [ ] Our form for creating stories requires you to add the publication date, update this to automatically save the publication date as the day the story was first published (maybe you could then add a field to show when the story was updated).
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
-- [ ] Gracefully handle the error where someone tries to create a new story when they are not logged in.
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
