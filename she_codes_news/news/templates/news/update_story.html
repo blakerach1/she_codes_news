@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if request.user.is_authenticated %}
-    {% if user.id == story.author.id %}   
+    {% if request.user.id == newsstory.author_id %}   
 
     <h1>Update Story...</h1>
 

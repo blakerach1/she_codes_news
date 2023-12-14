@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if request.user.is_authenticated %}
-    {% if user.id == story.author.id %}   
+    {% if request.user.id == newsstory.author_id %}   
 
     <h1>Delete Story...</h1>
     <br></br>
