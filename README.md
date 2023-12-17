@@ -49,7 +49,7 @@ Welcome to my News Website, a project crafted as part the Django module in the S
 **Account Creation**
 - Users can easily create an account to unlock personalized features.
 - [x] "Create Account" page
-![Account creation link on home screen](img/create-ac-link)
+![Account creation link on home screen](img/create-ac-link.png)
 ![Account creation form](img/create-ac-form.png)
 - Users can seemlessly login and out of their account. 
 - [x] Log-in/log-out
