@@ -1,10 +1,10 @@
-# {{ Rachel Blake }} - She Codes News Project
+# Rachel Blake - She Codes News Project
 
 ## About This Project
-{{ Welcome to my News Website, a project crafted as part the Django module in the SheCodes Plus program. This dynamic web application empowers users to engage with news content in a personalized and interactive manner. }}
+Welcome to my News Website, a project crafted as part the Django module in the SheCodes Plus program. This dynamic web application empowers users to engage with news content in a personalized and interactive manner.
 
 ## How To Run This Code
-{{
+
 ### Clone the repository:
 
 - Open your Windows Terminal.
@@ -37,10 +37,10 @@
 `python manage.py runserver`
 - The server will start, and you can access the project by visiting:
  `http://127.0.0.1:8000/' in your web browser.
-}}
+
 
 ## Database Schema
-![ {{ ERD }} ]( {{ img/my_ERD.png }} )
+![ERD](img/my_ERD.png)
 
 ## Project Features
 
@@ -49,7 +49,7 @@
 **Account Creation**
 - Users can easily create an account to unlock personalized features.
 - [x] "Create Account" page
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Account creation from home screen, directed to an account creation form](img/create-ac-form.png)(img/create-ac-link)
 - Users can seemlessly login and out of their account. 
 - [x] Log-in/log-out
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )

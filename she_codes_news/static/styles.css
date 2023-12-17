@@ -78,7 +78,18 @@ input, textarea {
     cursor: pointer;
 }
 
-#id_title {
+#id_username,
+#id_password,
+#id_password1,
+#id_password2,
+#id_old_password,
+#id_new_password1,
+#id_new_password2 {
+    max-width: 20rem;
+}
+
+#id_title,
+#id_email {
     max-width: 30rem;
 }
 

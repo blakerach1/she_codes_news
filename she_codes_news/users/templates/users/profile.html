@@ -9,7 +9,10 @@
     <p>Description: {{ user_profile.description }}
 
     {% if request.user.is_authenticated %}
+        {% if request.user.id == newsstory.author_id %} 
         <p><a href="{% url 'users:changePassword' %}">Update Password</a></p> 
+        {% else %}
+        {% endif %}
     {% else %}
     {% endif %}
     
