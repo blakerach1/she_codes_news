@@ -40,7 +40,7 @@
 }}
 
 ## Database Schema
-![ {{ ERD }} ]( {{ ./relative_path_to_your_entity_relationship_diagram }} )
+![ {{ ERD }} ]( {{ img/my_ERD.png }} )
 
 ## Project Features
 
@@ -108,6 +108,7 @@
 
 
 ## Future Developments:
+- [ ] Redesign. 
 - [ ] Ability for users to edit their own profile and add a description.
 - [ ] Add categories to the stories and allow the user to search for stories bycategory.
 - [ ] Add the ability to “favourite” stories and see a page with your favouritestories.
