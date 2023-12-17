@@ -49,41 +49,46 @@ Welcome to my News Website, a project crafted as part the Django module in the S
 **Account Creation**
 - Users can easily create an account to unlock personalized features.
 - [x] "Create Account" page
-![Account creation from home screen, directed to an account creation form](img/create-ac-form.png)(img/create-ac-link)
+![Account creation link on home screen](img/create-ac-link)
+![Account creation form](img/create-ac-form.png)
 - Users can seemlessly login and out of their account. 
 - [x] Log-in/log-out
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Login link](img/login-link.png)
+![Login form](img/login-form.png)
+![Log out link](img/logout-link.png)
 - Users can view details of their account, include a profile description field. 
 - [x] "Account view" page
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Profile view when user is logged in](img/view-profile-link.png)
+![Profile view of users account](img/user-profile-view.png)
 
 **Story Authoring**
 - Account holders can craft compelling news stories with the ability to include captivating images. 
 - [x] "Create Story" functionality only available when user is logged in
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Create story link only visible when logged in](img/create-story-link.png)
 - [x] Story images
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Create story form with picture url field](img/create-story.png)
 
 ### Seamless Content Exploration:
 
 **Latest News**
 - Users stay updated with the most recent stories at a glance. 
 - [x] Order stories by date
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Latest stories ordered by date](img/order-stories.png)
 
 **News by Author**
 - Users can explore stories curated by their favourite authors. 
 - [x] View stories by author
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Views stories written by a particular author](img/author-story-view.png)
 
 
 ### Style:
 
 - [x] Styled "new story" form
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Form styling applied to the new story form](img/create-story.png)
 
 - [x] "Log-in" button only visible when no user is logged in/"Log-out" button only visible when a user *is* logged in
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Login link visible when no user logged in](img/login-link.png)
+![Logout link visible only when user logged in](img/logout-link.png)
 
 
 
@@ -94,17 +99,24 @@ Welcome to my News Website, a project crafted as part the Django module in the S
 **Secure Editing and Deletion**
 - Users have the power to edit and delete only the stories they have authored, ensuring content integrity. 
 - [x] Add the ability to update and delete stories (consider permissions - whoshould be allowed to update or and/or delete stories).
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Links to edit and delete author's own stories](img/edit-delete-links.png)
+![Users can only edit and delete their own stories, otherwise error pg displays](img/edit-permission.png)
+![Edit story form](img/update-story-form.png)
+![Delete story form](img/delete-story-form.png)
 - Once Users are registered, they unlock additional access to create their own news content.
 - [x] Gracefully handle the error where someone tries to create a new story when they are not logged in.
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![Create story permission handling when not logged in](img/login-redirection.png)
 
 **Password Management**
 - [x] Password Management: Easily update passwords for enhanced account security.
+![Users can edit their own passwords](img/update-pw-link.png)
+![Update password form](img/update-pw-form.png)
 
 **Authors in-focus**
 - Users are able to share a professional bio for readers to learn more about their favourite authors.
 - [x] Author profiles: View details about the author when selecting the author's username. 
+![Users can view author's profiles](img/view-author-link.png)
+![Users can view author's profiles](img/author-profile-view.png)
 
 
 ## Future Developments:
